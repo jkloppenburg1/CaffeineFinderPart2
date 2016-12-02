@@ -1,6 +1,7 @@
 package edu.orangecoastcollege.cs273.caffeinefinder;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -163,10 +164,19 @@ public class CaffeineListActivity extends AppCompatActivity
         }
 
         // Launch new Intent to the Details activity
-        /*
+
         Intent detailsIntent = new Intent(this, CaffeineDetailsActivity.class);
         detailsIntent.putExtra("ClosestCaffeineLocation", closestCaffeineLocation);
         startActivity(detailsIntent);
-        */
     }
+
+    public void viewLocationDetails(View view)
+    {
+         CaffeineLocation selectedLocation = (CaffeineLocation) view.getTag();
+
+        Intent detailsIntent = new Intent(this, CaffeineDetailsActivity.class);
+        detailsIntent.putExtra("SelectedLocation", selectedLocation);
+        startActivity(detailsIntent);
+    }
+
 }
