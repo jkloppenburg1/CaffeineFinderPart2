@@ -8,6 +8,20 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.orangecoastcollege.cs273.caffeinefinder.CaffeineDetailsActivity">
+    tools:context="edu.orangecoastcollege.cs273.caffeinefinder.CaffeineDetailsActivity"
+    android:orientation="vertical">
 
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/fragment"
+        android:layout_weight="1" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_weight="1" />
 </LinearLayout>
