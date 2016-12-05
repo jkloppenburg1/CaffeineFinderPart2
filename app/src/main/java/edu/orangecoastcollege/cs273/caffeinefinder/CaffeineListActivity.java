@@ -167,7 +167,7 @@ public class CaffeineListActivity extends AppCompatActivity
         // Launch new Intent to the Details activity
 
         Intent detailsIntent = new Intent(this, CaffeineDetailsActivity.class);
-        detailsIntent.putExtra("ClosestCaffeineLocation", closestCaffeineLocation);
+        detailsIntent.putExtra("CaffeineLocation", closestCaffeineLocation);
         startActivity(detailsIntent);
     }
 
@@ -176,7 +176,7 @@ public class CaffeineListActivity extends AppCompatActivity
          CaffeineLocation selectedLocation = (CaffeineLocation) view.getTag();
 
         Intent detailsIntent = new Intent(this, CaffeineDetailsActivity.class);
-        detailsIntent.putExtra("SelectedLocation", selectedLocation);
+        detailsIntent.putExtra("CaffeineLocation", selectedLocation);
         startActivity(detailsIntent);
     }
 
